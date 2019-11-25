@@ -23,7 +23,7 @@ phases:
       - docker tag pgaddam/demo2:latest 598860148757.dkr.ecr.us-east-2.amazonaws.com/claims2:latest
       - docker push 598860148757.dkr.ecr.us-east-2.amazonaws.com/claims2:latest
       - sleep 10
-      - printf '[{"name":"claims-container-2","imageUri":"598860148757.dkr.ecr.us-east-2.amazonaws.com/claims2:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"$ENVIRONMENT","imageUri":"598860148757.dkr.ecr.us-east-2.amazonaws.com/claims2:latest"}]' > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
