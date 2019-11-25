@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController()
 @RequestMapping("services")
 public class DemoController {
+
+    @Value("${environment}")
+    String paramName;
+
     @GetMapping(path = "/hello")
     public String getHello() {
-        return "Hello Demo3 success push";
+        return "Hello this is environment: "+paramName + " | And version: 1";
     }
 }
