@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @GetMapping(path = "/hello")
     public String getHello() {
-        return "Hello Demo2 success push";
+        return "Hello Demo3 success push";
     }
 }
