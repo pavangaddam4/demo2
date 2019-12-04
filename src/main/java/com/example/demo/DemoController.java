@@ -15,6 +15,6 @@ public class DemoController {
 
     @GetMapping(path = "/hello")
     public String getHello() {
-        return "Demo using AWS pipeline, This is environment: "+paramName + " | And version: 2";
+        return "Demo using AWS pipeline, This is environment: "+paramName + " | And version: 1";
     }
 }
